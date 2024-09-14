@@ -40,6 +40,7 @@ public class BackgroundShop : MonoBehaviour
             buyButton.onClick.RemoveAllListeners();
             buyButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 if (CoinData.Instance.GetCoinAmount() >= price)
                 {
                     CoinData.Instance.MinusCoin(price);
@@ -47,6 +48,7 @@ public class BackgroundShop : MonoBehaviour
                     coinManager.UpdateCoinText();
                     PlayerPrefs.SetInt("SelectedBackground", backgroundIndex);
                     SetButtonActive();
+                    BackgroundManager.Instance.SetBackgroundImage();
                 }
             });
         }
@@ -56,8 +58,10 @@ public class BackgroundShop : MonoBehaviour
             selectButton.onClick.RemoveAllListeners();
             selectButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 PlayerPrefs.SetInt("SelectedBackground", backgroundIndex);
                 SetButtonActive();
+                BackgroundManager.Instance.SetBackgroundImage();
             });
         }
     }

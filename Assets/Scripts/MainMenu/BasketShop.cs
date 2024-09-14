@@ -40,6 +40,7 @@ public class BasketShop : MonoBehaviour
             buyButton.onClick.RemoveAllListeners();
             buyButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 if (CoinData.Instance.GetCoinAmount() >= price)
                 {
                     CoinData.Instance.MinusCoin(price);
@@ -56,6 +57,7 @@ public class BasketShop : MonoBehaviour
             selectButton.onClick.RemoveAllListeners();
             selectButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 PlayerPrefs.SetInt("SelectedBasket", basketIndex);
                 SetButtonActive();
             });

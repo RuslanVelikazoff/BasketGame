@@ -43,7 +43,7 @@ public class MainPanel : MonoBehaviour
             startGameButton.onClick.AddListener(() =>
             {
                 AudioManager.Instance.Play("Click");
-                SceneManager.LoadScene("Game");
+                Loader.Load("Game");
             });
         }
 

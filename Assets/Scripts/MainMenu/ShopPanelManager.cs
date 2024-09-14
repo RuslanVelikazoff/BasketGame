@@ -33,6 +33,7 @@ public class ShopPanelManager : MonoBehaviour
             nextButton.onClick.RemoveAllListeners();
             nextButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 currentIndex++;
                 if (currentIndex > maxIndex)
                 {
@@ -47,6 +48,7 @@ public class ShopPanelManager : MonoBehaviour
             previousButton.onClick.RemoveAllListeners();
             previousButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.Play("Click");
                 currentIndex--;
                 if (currentIndex < 0)
                 {

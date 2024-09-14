@@ -26,16 +26,6 @@ public class ShopPanel : MonoBehaviour
     private void Awake()
     {
         BackButtonClickAction();
-
-        if (!PlayerPrefs.HasKey("SelectedBackground"))
-        {
-            PlayerPrefs.SetInt("SelectedBackground", 0);
-        }
-
-        if (!PlayerPrefs.HasKey("SelectedBasket"))
-        {
-            PlayerPrefs.SetInt("SelectedBasket", 0);
-        }
     }
 
     private void BackButtonClickAction()
