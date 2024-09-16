@@ -14,6 +14,8 @@ public class LivesManager : MonoBehaviour
 
     [SerializeField] 
     private GameObject losePanel;
+    [SerializeField] 
+    private GameObject player;
     
     private int currentLives = 3;
 
@@ -30,6 +32,7 @@ public class LivesManager : MonoBehaviour
             currentLives = 3;
         }
         SetLiveSprites();
+        AudioManager.Instance.Play("Health");
     }
 
     public void Damage()
@@ -38,8 +41,30 @@ public class LivesManager : MonoBehaviour
         if (currentLives <= 0)
         {
             losePanel.SetActive(true);
+            player.SetActive(false);
+            AudioManager.Instance.Play("Lose");
+        }
+        else
+        {
+            AudioManager.Instance.Play("Damage");
         }
         SetLiveSprites();
+    }
+
+    public void Kill()
+    {
+        currentLives = 0;
+        SetLiveSprites();
+        losePanel.SetActive(true);
+        player.SetActive(false);
+        AudioManager.Instance.Play("Lose");
+    }
+
+    public void Health()
+    {
+        currentLives = 3;
+        SetLiveSprites();
+        AudioManager.Instance.Play("Health");
     }
 
     private void SetLiveSprites()

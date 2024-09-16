@@ -10631,13 +10631,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: b6877d93dc5488f47bf2d9bef69ecfa4, type: 3}
     loop: 1
     volume: 0
     pitch: 0
     source: {fileID: 0}
   - name: Click
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 5be7498a21c92fd4b86caf664afc9b39, type: 3}
+    loop: 0
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Health
+    clip: {fileID: 8300000, guid: e565d0e2fc6a8b64ea45f465de8f66e6, type: 3}
+    loop: 0
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Lose
+    clip: {fileID: 8300000, guid: d1c27760bbd957f40a32b96b80346378, type: 3}
+    loop: 0
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Damage
+    clip: {fileID: 8300000, guid: 89e3fb430b26ef749afa9b743689ad26, type: 3}
+    loop: 0
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Coin
+    clip: {fileID: 8300000, guid: 61d470f8c3c06fc4aa0eade3a4d564ce, type: 3}
     loop: 0
     volume: 0
     pitch: 0
