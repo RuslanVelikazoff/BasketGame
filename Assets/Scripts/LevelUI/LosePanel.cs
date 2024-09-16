@@ -24,6 +24,7 @@ public class LosePanel : MonoBehaviour
     private void Awake()
     {
         LoseButtonClickAction();
+        Time.timeScale = 0f;
     }
 
     private void LoseButtonClickAction()
