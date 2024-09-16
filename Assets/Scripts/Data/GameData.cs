@@ -7,7 +7,7 @@ public class GameData
 
     public GameData()
     {
-        coin = 20000;
+        coin = 0;
 
         buyBackground[0] = true;
         buyBackground[1] = false;
