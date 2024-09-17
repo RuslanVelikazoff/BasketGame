@@ -13,12 +13,16 @@ public class LosePanel : MonoBehaviour
     private TextMeshProUGUI timerText;
     [SerializeField] 
     private TextMeshProUGUI coinText;
+
+    [SerializeField]
+    private UpdateLeaderboard leaderboard;
     
     private void OnEnable()
     {
         CoinManager.Instance.AddCoinToData();
         timerText.text = TimerManager.Instance.GetTimerString();
         coinText.text = CoinManager.Instance.GetCoinAmount().ToString();
+        leaderboard.SetLeaderboardEntry(CoinManager.Instance.GetCoinAmount());
     }
 
     private void Awake()
